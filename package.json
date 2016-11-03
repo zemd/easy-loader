@@ -1,0 +1,40 @@
+{
+  "name": "easy-loader",
+  "version": "1.0.0",
+  "description": "Helper to load configs or services easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zemd/easy-loader"
+  },
+  "author": "Dmitry Zelenetskiy <dmitry.zelenetskiy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zemd/easy-loader/issues"
+  },
+  "homepage": "https://github.com/zemd/easy-loader",
+  "dependencies": {
+    "lodash": "4.14.1",
+    "rc": "^1.1.6"
+  },
+  "devDependencies": {
+    "ava": "0.16.0"
+  },
+  "ava": {
+    "concurrency": 10,
+    "files": [
+      "test/**/*.js",
+      "!tests/fixtures/*.*"
+    ],
+    "sources": [
+      "index.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
