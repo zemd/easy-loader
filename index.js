@@ -26,15 +26,18 @@ function buildPath(pathTemplateCompiled, cwd, variables) {
   return configPath;
 }
 
-module.exports = ({
-  pattern = 'configs/<%=NODE_ENV%>.js',
-  variables = {},
-  cwd = process.cwd(),
-  defaults = {NODE_ENV: 'defaults'},
-  rc = {prefix: 'local'},
-  mergeWithDefaults = true,
-  returnHelperFn = true
-}) => {
+module.exports = (opts) => {
+
+  const {
+    pattern = 'configs/<%=NODE_ENV%>.js',
+    variables = {},
+    cwd = process.cwd(),
+    defaults = {NODE_ENV: 'defaults'},
+    rc = {prefix: 'local'},
+    mergeWithDefaults = true,
+    returnHelperFn = true
+  } = opts;
+
   const pathTemplateCompiled = _.template(pattern);
   const buildPathFn = _.partial(buildPath, pathTemplateCompiled, cwd);
 
