@@ -8,6 +8,7 @@ Easy helper function to load configs and services.
 [![CircleCI](https://circleci.com/gh/zemd/easy-loader/tree/master.svg?style=svg)](https://circleci.com/gh/zemd/easy-loader/tree/master)
 [![dependencies:?](https://img.shields.io/david/zemd/easy-loader.svg)](https://david-dm.org/zemd/easy-loader)
 [![devDependencies:?](https://img.shields.io/david/dev/zemd/easy-loader.svg?style=flat)](https://david-dm.org/zemd/easy-loader)
+[![Inline docs](http://inch-ci.org/github/zemd/easy-loader.svg?branch=master)](http://inch-ci.org/github/zemd/easy-loader)
 
 ## Installation
 
