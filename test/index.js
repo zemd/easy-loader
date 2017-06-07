@@ -9,7 +9,9 @@ test('Config loads development configs and merges them with .localrc values', t 
   process.env.NODE_ENV = 'development';
   process.chdir(path.join(__dirname, 'fixtures/local'));
 
-  const config = require('../index')({cwd: path.join(__dirname, 'fixtures/local')})
+  const config = require('../index')({
+    cwd: path.join(__dirname, 'fixtures/local'),
+  });
 
   t.deepEqual(config('mysql'), {
     host: 'mylocal.mysql.com',
@@ -28,7 +30,7 @@ test('Config loads development configs and .localrc doesn\'t exist', t => {
   process.env.NODE_ENV = 'development';
   process.chdir(path.join(__dirname, 'fixtures/prod'));
 
-  const config = require('../index')({cwd: path.join(__dirname, 'fixtures/prod')});
+  const config = require('../index')({ cwd: path.join(__dirname, 'fixtures/prod') });
 
   t.deepEqual(config('mysql'), {
     host: 'development.mysql.com',
@@ -47,7 +49,7 @@ test('Config function can apply default values if no config key found', t => {
   process.env.NODE_ENV = 'development';
   process.chdir(path.join(__dirname, 'fixtures/prod'));
 
-  const config = require('../index')({cwd: path.join(__dirname, 'fixtures/prod')});
+  const config = require('../index')({ cwd: path.join(__dirname, 'fixtures/prod') });
 
   t.is(config('unknown', 'defaultValue'), 'defaultValue');
   t.is(config('unknown', false), false);
@@ -61,7 +63,7 @@ test('Config loaded for default environment when environment file is missing', t
   process.env.NODE_ENV = 'production';
   process.chdir(path.join(__dirname, 'fixtures/prod'));
 
-  const config = require('../index')({cwd: path.join(__dirname, 'fixtures/prod')});
+  const config = require('../index')({ cwd: path.join(__dirname, 'fixtures/prod') });
 
   t.deepEqual(config('mysql'), {
     host: 'localhost',
@@ -98,7 +100,7 @@ test('Do not load rc file even if it exists', t => {
 
   const config = require('../index')({
     cwd: path.join(__dirname, 'fixtures/local'),
-    rc: false,
+    useRC: false,
     mergeWithDefaults: false
   });
 

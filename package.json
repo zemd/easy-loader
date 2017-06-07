@@ -1,7 +1,16 @@
 {
   "name": "easy-loader",
-  "version": "1.0.2",
-  "description": "Helper to load configs or services easily",
+  "version": "1.1.0",
+  "description": "Simple & lightweight configuration loader for every day usage",
+  "keywords": [
+    "conf",
+    "config",
+    "configuration",
+    "node-config",
+    "config-node",
+    "env",
+    "environment"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "ava --verbose"
@@ -17,11 +26,16 @@
   },
   "homepage": "https://github.com/zemd/easy-loader",
   "dependencies": {
-    "lodash": "4.14.1",
-    "rc": "^1.1.6"
+    "lodash": "^4.17.4"
+  },
+  "optionalDependencies": {
+    "rc": "^1.2.1"
   },
   "devDependencies": {
-    "ava": "0.16.0"
+    "ava": "^0.19.1"
+  },
+  "peerDependencies": {
+    "logtown": "^2.1.1"
   },
   "ava": {
     "concurrency": 10,
@@ -34,7 +48,11 @@
     ],
     "require": [
       "babel-register"
-    ],
-    "babel": "inherit"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@ava/stage-4"
+    ]
   }
 }
