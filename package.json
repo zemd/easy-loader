@@ -26,16 +26,12 @@
   },
   "homepage": "https://github.com/zemd/easy-loader",
   "dependencies": {
-    "lodash": "^4.17.4"
-  },
-  "optionalDependencies": {
+    "lodash": "^4.17.4",
+    "logtown": "^2.1.1",
     "rc": "^1.2.1"
   },
   "devDependencies": {
     "ava": "^0.19.1"
-  },
-  "peerDependencies": {
-    "logtown": "^2.1.1"
   },
   "ava": {
     "concurrency": 10,
