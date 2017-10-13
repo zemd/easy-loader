@@ -30,7 +30,8 @@
     "rc": "^1.2.1"
   },
   "devDependencies": {
-    "ava": "^0.22.0"
+    "ava": "^0.22.0",
+    "logtown": "^2.1.1"
   },
   "peerDependencies": {
     "logtown": "^2.1.1"
