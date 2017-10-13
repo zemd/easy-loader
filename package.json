@@ -33,7 +33,7 @@
     "ava": "^0.22.0"
   },
   "peerDependencies": {
-    "logtown": "^2.1.1",
+    "logtown": "^2.1.1"
   },
   "ava": {
     "concurrency": 10,
